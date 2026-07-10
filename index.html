@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mbarak Electronics</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Mbarak Electronics home">
+        <span class="brand-mark">ME</span>
+        <span>
+          <strong>Mbarak</strong>
+          <em>Electronics</em>
+        </span>
+      </a>
+
+      <label class="search-box">
+        <input id="searchInput" type="search" placeholder="Search" autocomplete="off" />
+      </label>
+
+      <a class="call-link" href="tel:+254728882223">0728882223</a>
+
+      <button class="cart-button" id="openCart" type="button">
+        <span>CART /</span>
+        <strong id="cartTotalTop">KSh 0</strong>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </header>
+
+    <main>
+      <section class="shop-intro">
+        <div>
+          <p class="eyebrow">Nairobi deals, ready to order</p>
+          <h1>Mbarak Electronics</h1>
+          <p>Phones, laptops, cameras, PlayStation gear, audio and accessories at fair Kenyan market prices.</p>
+        </div>
+        <a class="primary-link" href="https://wa.me/254728882223" target="_blank" rel="noreferrer">Chat on WhatsApp</a>
+      </section>
+
+      <nav class="category-strip" aria-label="Product categories">
+        <button class="category-button active" type="button" data-category="All">All</button>
+        <button class="category-button" type="button" data-category="Phones">Phones</button>
+        <button class="category-button" type="button" data-category="Laptops">Laptops</button>
+        <button class="category-button" type="button" data-category="Cameras">Cameras</button>
+        <button class="category-button" type="button" data-category="PlayStation">PlayStation</button>
+        <button class="category-button" type="button" data-category="Accessories">Accessories</button>
+        <button class="category-button" type="button" data-category="Watches">Watches</button>
+      </nav>
+
+      <section class="product-grid" id="productGrid" aria-live="polite"></section>
+      <p class="empty-state" id="emptyState" hidden>No matching products found.</p>
+    </main>
+
+    <aside class="cart-panel" id="cartPanel" aria-hidden="true">
+      <div class="cart-header">
+        <div>
+          <p class="eyebrow">Your order</p>
+          <h2>Cart</h2>
+        </div>
+        <button class="icon-button" id="closeCart" type="button" aria-label="Close cart">x</button>
+      </div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-footer">
+        <div class="cart-line">
+          <span>Total</span>
+          <strong id="cartTotalPanel">KSh 0</strong>
+        </div>
+        <a class="checkout-button" id="checkoutButton" href="https://wa.me/254728882223" target="_blank" rel="noreferrer">Checkout on WhatsApp</a>
+      </div>
+    </aside>
+
+    <div class="overlay" id="overlay"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
